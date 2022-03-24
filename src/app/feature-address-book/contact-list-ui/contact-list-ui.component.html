@@ -1,4 +1,51 @@
-Contact List
-<div *ngFor="let contact of contacts">
-    {{contact.fname}} {{contact.lname}}
+
+<div class="contact-list-container">
+    <div class="contact-list-section">
+        <table class="contact-table">
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th> 
+            <tr *ngFor="let contact of contacts" 
+            class="contact-row"
+            (click)="handleContactRowClick($event)"
+            attr.data-user-id="{{contact.userId}}">
+                <td class="contact-cell">
+                    {{contact.fname}} {{contact.lname}}
+                </td>
+                <td class="contact-cell">
+                    {{contact.email}}
+                </td>
+                <td class="contact-cell">
+                    {{contact.phone}}
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="contact-list-section ">
+        <div class="contact-detail" *ngIf="selectedContact">
+            <div class="contact-header contact-detail-item">
+                <div class="contact-image">
+                    <img src="{{selectedContact.picture}}">
+                </div>
+                <div class="contact-name">
+                    {{selectedContact.fname}} {{selectedContact.lname}}
+                </div>
+                <div class="contact-street">
+                    {{selectedContact.address?.street?.number}} {{selectedContact.address?.street?.name}}
+                </div>
+                <div class="contact-state">
+                    {{selectedContact.address?.city}}, {{selectedContact.address?.state}}.{{selectedContact.address?.postcode}}
+                </div>
+            </div>
+            <div class="contact-detail-item">
+                {{selectedContact.email}}
+            </div>
+            <div class="contact-detail-item">
+                {{selectedContact.phone}}
+            </div>
+            <div class="contact-detail-item">
+                DOB {{selectedContact.dob | date}}
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,7 @@
+{
+    "/api":{
+        "target": "https://randomuser.me/",
+        "secure": true,
+        "logLevel": "debug"
+    }
+}

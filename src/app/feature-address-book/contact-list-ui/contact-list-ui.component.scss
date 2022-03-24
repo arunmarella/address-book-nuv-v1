@@ -1,0 +1,61 @@
+.contact-list-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+.contact-list-section{
+    padding: 1rem;
+}
+.contact-table{
+    border-collapse: collapse;
+    background-color: white;
+    margin-left: 2.5rem;
+    display: block;
+    border-radius: 0.25rem;
+    overflow-y: auto;
+    height: calc(100vh - 20px);
+}
+.contact-row{
+    height: 35px;
+    cursor: pointer;
+}
+.contact-cell{
+    border-top: 1px solid lightblue;
+    color: #00265d
+}
+.contact-title{
+    font-size: large;
+    height: 25px;
+}
+.contact-detail{
+    background-color: white;
+    height: calc(100vh - 100px);
+}
+.contact-header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.contact-image{
+    text-align: center;
+    border-radius: 0.25rem;
+}
+.contact-name{
+    font-size: x-large;
+    color: #00265d;
+    text-align: center;
+}
+.contact-street{
+    text-align: center;
+}
+.conact-state{
+    text-align: center;
+}
+.contact-detail-item{
+    border-bottom: 1px lightblue solid;
+    color: #00265d;
+    padding: 3rem;
+    font-size: large;
+}
