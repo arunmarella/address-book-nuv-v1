@@ -12,10 +12,11 @@
     border-collapse: collapse;
     background-color: white;
     margin-left: 2.5rem;
+    padding: 1rem;
     display: block;
     border-radius: 0.25rem;
     overflow-y: auto;
-    height: calc(100vh - 20px);
+    height: calc(100vh - 50px);
 }
 .contact-row{
     height: 35px;
@@ -23,6 +24,7 @@
 }
 .contact-cell{
     border-top: 1px solid lightblue;
+    cursor: pointer;
     color: #00265d
 }
 .contact-title{
@@ -31,7 +33,7 @@
 }
 .contact-detail{
     background-color: white;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 50px);
 }
 .contact-header{
     display: flex;
