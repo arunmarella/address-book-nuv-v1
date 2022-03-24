@@ -1,0 +1,30 @@
+.contact-detail{
+    background-color: white;
+    height: calc(100vh - 100px);
+}
+.contact-header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.contact-image{
+    text-align: center;
+    border-radius: 0.25rem;
+}
+.contact-name{
+    font-size: x-large;
+    color: #00265d;
+    text-align: center;
+}
+.contact-street{
+    text-align: center;
+}
+.conact-state{
+    text-align: center;
+}
+.contact-detail-item{
+    border-bottom: 1px lightblue solid;
+    color: #00265d;
+    padding: 3rem;
+    font-size: large;
+}

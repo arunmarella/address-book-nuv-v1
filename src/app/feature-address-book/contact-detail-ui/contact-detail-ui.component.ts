@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Contact } from '../model/contact';
 
 @Component({
-  selector: 'app-contact-detail-ui',
+  selector: 'contact-detail-ui',
   templateUrl: './contact-detail-ui.component.html',
   styleUrls: ['./contact-detail-ui.component.scss']
 })
 export class ContactDetailUiComponent implements OnInit {
-
+  @Input()
+  selectedContact: Contact;
   constructor() { }
 
   ngOnInit(): void {

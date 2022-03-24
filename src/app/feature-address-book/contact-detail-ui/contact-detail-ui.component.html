@@ -1,1 +1,25 @@
-<p>contact-detail-ui works!</p>
+<div class="contact-detail" *ngIf="selectedContact">
+    <div class="contact-header contact-detail-item">
+        <div class="contact-image">
+            <img src="{{selectedContact.picture}}">
+        </div>
+        <div class="contact-name">
+            {{selectedContact.fname}} {{selectedContact.lname}}
+        </div>
+        <div class="contact-street">
+            {{selectedContact.address?.street?.number}} {{selectedContact.address?.street?.name}}
+        </div>
+        <div class="contact-state">
+            {{selectedContact.address?.city}}, {{selectedContact.address?.state}}.{{selectedContact.address?.postcode}}
+        </div>
+    </div>
+    <div class="contact-detail-item">
+        {{selectedContact.email}}
+    </div>
+    <div class="contact-detail-item">
+        {{selectedContact.phone}}
+    </div>
+    <div class="contact-detail-item">
+        DOB {{selectedContact.dob | date}}
+    </div>
+</div>
